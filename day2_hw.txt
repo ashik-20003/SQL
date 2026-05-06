@@ -1,0 +1,24 @@
+INSERT INTO books (id, title, author, price, stock_status, genre) VALUES
+(1, 'The Alchemist', 'Paulo Coelho', 300, 'In Stock', 'Fiction'),
+(2, 'Atomic Habits', 'James Clear', 550, 'In Stock', 'Self-Help'),
+(3, 'Rich Dad Poor Dad', 'Robert Kiyosaki', 350, 'Out of Stock', 'Finance'),
+(4, 'Harry Potter', 'J.K. Rowling', 800, 'In Stock', 'Fantasy'),
+(5, 'The Hobbit', 'J.R.R. Tolkien', 750, 'Out of Stock', 'Fantasy'),
+(6, 'Deep Work', 'Cal Newport', 400, 'In Stock', 'Productivity'),
+(7, 'Think and Grow Rich', 'Napoleon Hill', 200, 'In Stock', 'Finance'),
+(8, 'Ikigai', 'Hector Garcia', 450, 'Out of Stock', 'Self-Help'),
+(9, 'Wings of Fire', 'A.P.J. Abdul Kalam', 250, 'In Stock', 'Biography'),
+(10, 'Sapiens', 'Yuval Noah Harari', 900, 'In Stock', 'History'),
+(11, 'Zero to One', 'Peter Thiel', 650, 'Out of Stock', 'Business'),
+(12, 'The Power of Now', 'Eckhart Tolle', 300, 'In Stock', 'Spirituality');
+
+SELECT DISTINCT genre FROM `books`;
+
+SELECT * FROM `books` WHERE stock_status = "In Stock" and price<400;
+
+SELECT * FROM `books` WHERE stock_status = "Out of Stock" OR price>700;
+
+SELECT title,price,(price*1.10) AS "PRICE WITH GST" FROM `books`;
+
+SELECT title,price,stock_status FROM `books` ORDER BY price DESC;
+
